@@ -1,7 +1,7 @@
 This small program is useful when trying to find the checksum used by
 simple RF protocols packets, like the ones sent by TPMS sensors, weather
-stations and so forth. It will try all the checksum 8 polynomials and
-initalization values, xor and addition of bytes, in order to find something
+stations and so forth. It will try all the crc8() polynomials and
+initalization values, xor and additions of bytes, in order to find something
 matching the vectors provided.
 
 It is best to provide at least few vectors (three or more) for the program
@@ -12,4 +12,5 @@ the checksum always at the end of the sequence, since all the protocols
 I saw so far have the checksum byte at the end.
 
 There is no use interface whatsoever, you have to edit the program C
-file and fill the main() function with your data.
+file and fill the main() function with your data. The program was written
+in five minutes, so the quality is low.

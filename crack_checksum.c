@@ -97,6 +97,10 @@ int main(void) {
         (uint8_t*)"\xD9\xB6\x22\x85\xD5\x9C\x80\x54\x8A",
         (uint8_t*)"\xD3\xC7\x1F\xD3\xDF\x1E\x00\x41\x96"
     };
-    bruteforce_crc8(vectors,3,9,5);
+    
+    int num_messages = 3;
+    int len_messages = 9;
+    int min_message_len = 5;
+    bruteforce_crc8(vectors,num_messages,len_messages,min_message_len);
     return 0;
 }
