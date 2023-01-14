@@ -91,7 +91,8 @@ int bruteforce_crc8(const uint8_t **v, size_t numv, size_t len, size_t minlen) {
 }
 
 int main(void) {
-    /* Toyota TMPS protocol. */
+    /* Toyota TMPS protocol. Last byte is crc8 checksum with
+     * poly 0x07, init 0x80. */
     const uint8_t *vectors[] = {
         (uint8_t*)"\xD5\x15\x7B\x93\xCE\x9C\x00\x62\x3D",
         (uint8_t*)"\xD9\xB6\x22\x85\xD5\x9C\x80\x54\x8A",
